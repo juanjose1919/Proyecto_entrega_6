@@ -67,8 +67,9 @@ st.write('Al separar las variables por categoria se evidencia que, en realidad l
 st.markdown(f'<h1 style="color:#117A65 ;font-size:35px;">{"Quinta parte: VisualizaciOn de los datos"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"DistribuciOn de las variables"}</h1>', unsafe_allow_html=True)
 
-st.text('En este apartado se observan las relaciones graficas entre las variables respecto a la objetivo')
+st.write('En este apartado se observan las relaciones graficas entre las variables respecto a la objetivo')
 
+st.image('./images/Potability_count.png')
 
 #pot = data['Potability'].value_counts()
 #pot.index = ['NO', 'SI']
