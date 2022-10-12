@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 st.title('Titulo')
+st.header('Trabajo')
+
 
 data = pd.read_csv('https://raw.githubusercontent.com/labeconometria/MLxE/main/proyectos2do/datasets3.csv')
 pot = data['Potability'].value_counts()
