@@ -74,13 +74,13 @@ col1, col2 = st.columns(2)
 with col1:
     st.image('./images/Potability_count.png')
     st.image('./images/Chloramines_count.png')
-    st.image('./images/Organic_carbon_count')
-    st.image('./images/Solids_count')
+    st.image('./images/Organic_carbon_count.png')
+    st.image('./images/Solids_count.png')
 with col2:
-    st.image('./images/Conductivity_count')
-    st.image('./images/Hardness_count')
-    st.image('./images/Sulfate_count')
-    st.image('./images/Turbidity_count')
+    st.image('./images/Conductivity_count.png')
+    st.image('./images/Hardness_count.png')
+    st.image('./images/Sulfate_count.png')
+    st.image('./images/Turbidity_count.png')
     
 st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"Conclusiones intermedias"}</h1>', unsafe_allow_html=True)
 
