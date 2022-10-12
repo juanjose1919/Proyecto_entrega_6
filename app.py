@@ -32,6 +32,10 @@ st.table(lista)
 
 df = pd.read_csv('data_mahalanobis.csv')
 
+st.write('Mediante el calculo de Mahalanobis, se predijo el valor de dichos valores nulos como varibales objetivo y las variables explicativas fueron las demás variables con valores valederos, recuerda que es la forma más utilizada de medir la distancia entre vectores')
+st.table(df.isna().sum())
+st.write('Como podemos observar, ahora no hay evidencia de la existencia de datos nulos, lo que permite continual con nuestro analisis')
+
 #pot = data['Potability'].value_counts()
 #pot.index = ['NO', 'SI']
 #fig, ax = plt.subplots(1,1)
