@@ -71,6 +71,25 @@ st.write('En este apartado se observan las relaciones graficas entre las variabl
 
 st.image('./images/Potability_count.png')
 
+col1, col2 = st.columns(2)
+with col1:
+    st.image('./images/Potability_count.png', width=355)
+    st.image('./images/Chloramines_count.png', width=355)
+    st.image('./images/Organic_carbon_count', width=355)
+    st.image('./images/Solids_count', width=355)
+with col2:
+    st.image('./images/Conductivity_count', width=355)
+    st.image('./images/Hardness_count', width=355)
+    st.image('./images/Sulfate_count', width=355)
+    st.image('./images/Turbidity_count', width=355)
+    
+st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"Conclusiones intermedias"}</h1>', unsafe_allow_html=True)
+
+st.write('Dentro de la muestra se observa que en mayor parte el agua no es potable, estando sobre 1750 datos. Además tanto el agua potable como la no potable se concentran en un ph cercano a 7 en el estudio, en niveles de dureza entre 175 y 225 (clasificando asi como agua dura), la cantidad de sOlidos disueltos predomina entre los 1000 y los 30000, mostrando asi que el agua muestra comportamientos similares en estas categorias. Por el otro lado, la cantidad de cloraminas se concentra en niveles cercanos a 7 para el agua no potable, mientras que para el agua potable se inclina a niveles cercanos a 8.')
+
+st.write('En cuanto a la cantidad de sulfato tiene comportamientos similares para agua potable y no potable, los que se concentran mayormente en valores cercanos a 340, a diferencia de la conductividad que presenta valores mas dispersos mayormente en el rango de 330 y 500. La cantidad de carbon organico en ambos casos se concentran entre 12.5 y 15.4, en el caso de los trihalometanos existe una cantidad mas significativa en los datos cercanos a 68. Por ultimo la cantidad medida en unidades de turbiedad se dispersa en mayor medida entre 3.2 y 5.7 unidades nefelométricas de turbidez.')
+    
+
 #pot = data['Potability'].value_counts()
 #pot.index = ['NO', 'SI']
 #fig, ax = plt.subplots(1,1)
