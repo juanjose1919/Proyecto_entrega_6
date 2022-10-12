@@ -144,7 +144,7 @@ with col13:
     st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:25px;">{"CONDUCTIVITY - POTABILITY"}</h1>', unsafe_allow_html=True)
     st.write('En la conductividad el agua no potable muestra una ligera asimetria positiva, ambas dispersiones se sitúan entre los 380 y 490 aproximadamente y sOlo en el caso del agua no potable se evidencian outliers en los dos limites.')
 with col14:
-    st.image('./images/conductivity_boxplot.png')
+    st.image('./images/Conductivity_boxplot.png')
 
 col15, col16 = st.columns(2)
 with col15:
