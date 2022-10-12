@@ -12,7 +12,6 @@ st.table(pot)
 
 st.header('Primera parte: ExploraciOn inicial de los datos')
 st.write(' En la exploraciOn inicial se busca identificar los datos obtenidos y revisar su coherencia en disposicion al analisis.')
-st.write(data.info())
 
 st.write('Como los datos obtenidos son bastabtes vamos a observar los primeros 10 datos')
 st.table(data.head(10))
@@ -36,11 +35,27 @@ st.write('Mediante el calculo de Mahalanobis, se predijo el valor de dichos valo
 st.table(df.isna().sum())
 st.write('Como podemos observar, ahora no hay evidencia de la existencia de datos nulos, lo que permite continual con nuestro analisis')
 
+st.header('Tercera parte: TransformaciOn de datos')
+st.write('La transformaciOn de datos está enfocada a la variable objetibo, puesto que es la única que presenta dos valores (bool variable), en este caso si el agua es potable o no, con valor de 1 para la respuesta afirmativa y 0 con la negativa')
+
+st.table(data.pivot_table(index=["Potability"],
+                  values=['ph','Hardness', 'Solids', 'Chloramines', 'Sulfate', 'Conductivity', 'Organic_carbon', 'Trihalomethanes', 'Turbidity'],
+                  aggfunc=["mean"]))
+
+st.markdown(f'<h1 style="color:#117A65 ;font-size:35px;">{"Cuarta parte: CategorizaciOn de los datos"}</h1>', unsafe_allow_html=True)
+
+st.table(data.pivot_table(index=["Potability"],
+                  values=['ph','Hardness', 'Solids', 'Chloramines', 'Sulfate', 'Conductivity', 'Organic_carbon', 'Trihalomethanes', 'Turbidity'],
+                  aggfunc=["mean"]))
+st.write('En la tabla pivot se muestra las medias de cada variable diferenciadas por agua potable y no potable. En primer lugar el promedio de las cloraminas es mayor en el agua potable por lo que en primer lugar se podria inferir que entre menor cantidad de cloraminas baja la pureza del agua, después se muestra que el promedio de la conductividad para agua potable es menor, por lo que se entenderia que a mayor conductividad menor pureza del agua. En este orden de ideas la dureza tendria una relaciOn de efecto negativo en la pureza del agua, la presencia de carbOn orgánico, igualmente, un efecto negativo, la presencia de sOlidos en el agua tendria un efecto positivo en su pureza, asi como el sulfato, los trihalometanos y la turbidez, por último el ph mostraria un efecto negativo, es decir se presenta un mayor ph en agua no potable.')
+
+st.text('Ahora se dividen las variables dependientes:')
+
 #pot = data['Potability'].value_counts()
 #pot.index = ['NO', 'SI']
 #fig, ax = plt.subplots(1,1)
 #ax.set_title('Proporción de potabilidad')
 #ax.bar(pot.index, pot.values, color = 'orange')
 
-st.pyplot(fig)
+#st.pyplot(fig)
 
