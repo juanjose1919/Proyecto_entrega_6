@@ -173,18 +173,30 @@ st.markdown(f'<h1 style="color:#117A65 ;font-size:35px;">{"Quinta parte: Categor
 st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"¿El dataset sin la variable objetivo sigue una distribuciOn normal multivariada?"}</h1>', unsafe_allow_html=True)
 st.image('./images/hist.png', width=600)
 
+st.markdown(f'<h1 style="text-align: center; color:#000000 ;font-size:20px;">{"Pvalor=4.509462445228134e-66, Normalidad=False"}</h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 style="text-align: center; color:#000000 ;font-size:20px;">{"Al analizar los datos sin la variable objetivo se rechaza la hipotesis nula, con un p-value menor a 0.05, se concluye que sin la variable objetivo el dataset no sigue una distribuciOn normal multivariada."}</h1>', unsafe_allow_html=True)
 
 
+st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"¿Cada una de las variables sigue una distribuciOn normal?"}</h1>', unsafe_allow_html=True)
+
+st.write('El P-valor de ph es 1.53318316701255e-13, se rechaza la HipOtesis nula, no se distribuye normalmente')
+st.write('El P-valor de Hardness es 0.0021154317073524, se rechaza la HipOtesis nula, no se distribuye normalmente')
+st.write('El P-valor de Solids es 1.8058356969296234e-17, se rechaza la HipOtesis nula, no se distribuye normalmente')
+st.write('El P-valor de Chloramines es 0.07209037989377975, no hay evidencia suficiente para rechazar la HipOtesis nula, se distribuye normalmente')
+st.write('El P-valor de Sulfate es 8.018465519323661e-18, se rechaza la HipOtesis nula, no se distribuye normalmente')
+st.write('El P-valor de Conductivity es 2.0186627369689347e-10, se rechaza la HipOtesis nula, no se distribuye normalmente')
+st.write('El P-valor de Organic_carbon es 0.3084251582622528, no hay evidencia suficiente para rechazar la HipOtesis nula, se distribuye normalmente')
+st.write('El P-valor de Trihalomethanes es 0.0012772877234965563, se rechaza la HipOtesis nula, no se distribuye normalmente')
+st.write('El P-valor de Turbidity es 0.6483234763145447, no hay evidencia suficiente para rechazar la HipOtesis nula, se distribuye normalmente')
+
+st.write('El P-valor de Potability es 0.0, se rechaza la HipOtesis nula, no se distribuye normalmente')
+
+st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"¿Existe alguna diferencia en la media y la mediana de cada una de las variables si se divide el dataset en agua potable y no potable?"}</h1>', unsafe_allow_html=True)
 
 
+st.table(data.groupby('Potability').agg({'ph':['mean','median'], 'Hardness':['mean','median'], 'Solids':['mean','median'], 'Chloramines':['mean','median'], 'Sulfate':['mean','median'], 'Conductivity':['mean','median'], 'Organic_carbon':['mean','median'], 'Trihalomethanes':['mean','median'], 'Turbidity':['mean','median']}))
+st.write('Evaluando la media y la mediana de las variables de las caracteristicas del agua, se encuentra que tanto para agua potable como para agua no potable existen diferencias entre la media y la mediana pero no son significativas, puesto que en una aproximaciOn de los valores de la media estos llegan a ser iguales que los valores de la mediana.')
 
-
-
-#pot = data['Potability'].value_counts()
-#pot.index = ['NO', 'SI']
-#fig, ax = plt.subplots(1,1)
-#ax.set_title('Proporción de potabilidad')
-#ax.bar(pot.index, pot.values, color = 'orange')
-
-#st.pyplot(fig)
+st.markdown(f'<h1 style="color:#117A65 ;font-size:35px;">{"ConclusiOn General "}</h1>', unsafe_allow_html=True)
+st.write('En el dataset se puede observar en primer lugar que la muestra de agua no potable es significativamente mayor a la del modelo, lo cual puede afectar en los resultados. Se busca definir la pureza o potabilidad del agua a partir de diferentes variables las cuales no presentan correlaciones significativas entre ellas. Se puede observar que los componentes del agua tanto pura como potable tienen comportamientos similares, aún asi se evidencia que los datos del agua no potable tienen una dispersiOn mayor, en este caso si tan solo una de las caracteristicas de los componentes no alcanzan o sobrepasa los estándares ideales para un consumo sano creará un desequilibrio, lo que la ingresaria en la clasificaciOn de no potable.')
 
