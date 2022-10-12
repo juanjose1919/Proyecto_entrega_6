@@ -91,12 +91,12 @@ st.write('En cuanto a la cantidad de sulfato tiene comportamientos similares par
 
 
 st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"RelaciOn entre las varaibles (sin variable objetivo)"}</h1>', unsafe_allow_html=True)
-st.image('heatmap.png', width=600)
+st.image('./images/heatmap.png', width=600)
 
 st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"Conclusiones intermedias"}</h1>', unsafe_allow_html=True)
 st.write('Se evidencia que la menor correlaciOn existe entre la totalidad de sOlidos disueltos en el agua y la cantidad de sulfato disuelta, seguido de la totalidad de sOlidos disueltos con el número de ph, y el nivel de dureza frente a la cantidad de sulfato disuelta, mientras que la mayor correlaciOn es entre el nivel de ph y el nivel de dureza, siendo este de sOlo 0.15.')
 
-st.image('pairplot.png')
+st.image('./images/pairplot.png')
 st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"Conclusiones intermedias"}</h1>', unsafe_allow_html=True)
 st.write('Es posible observar que el agua se comporta de manera similar en cada categorias por separado, teniendo en cuenta que en la muestra predomina el agua no potable.Además se evidencia que el agua potable muestra más concentraciOn en el promedio entre cada variable, mientras que el agua no potable llega a tener una mayor dispersiOn. Se puede concluir que el agua no es potable cuando las variables no están en equilibrio y sus valores se alejan de los promedios esperados.')
 
