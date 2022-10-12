@@ -87,7 +87,21 @@ st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"Conclusiones intermed
 st.write('Dentro de la muestra se observa que en mayor parte el agua no es potable, estando sobre 1750 datos. Además tanto el agua potable como la no potable se concentran en un ph cercano a 7 en el estudio, en niveles de dureza entre 175 y 225 (clasificando asi como agua dura), la cantidad de sOlidos disueltos predomina entre los 1000 y los 30000, mostrando asi que el agua muestra comportamientos similares en estas categorias. Por el otro lado, la cantidad de cloraminas se concentra en niveles cercanos a 7 para el agua no potable, mientras que para el agua potable se inclina a niveles cercanos a 8.')
 
 st.write('En cuanto a la cantidad de sulfato tiene comportamientos similares para agua potable y no potable, los que se concentran mayormente en valores cercanos a 340, a diferencia de la conductividad que presenta valores mas dispersos mayormente en el rango de 330 y 500. La cantidad de carbon organico en ambos casos se concentran entre 12.5 y 15.4, en el caso de los trihalometanos existe una cantidad mas significativa en los datos cercanos a 68. Por ultimo la cantidad medida en unidades de turbiedad se dispersa en mayor medida entre 3.2 y 5.7 unidades nefelométricas de turbidez.')
-    
+
+
+
+st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"RelaciOn entre las varaibles (sin variable objetivo)"}</h1>', unsafe_allow_html=True)
+st.image('heatmap.png', width=600)
+
+st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"Conclusiones intermedias"}</h1>', unsafe_allow_html=True)
+st.write('Se evidencia que la menor correlaciOn existe entre la totalidad de sOlidos disueltos en el agua y la cantidad de sulfato disuelta, seguido de la totalidad de sOlidos disueltos con el número de ph, y el nivel de dureza frente a la cantidad de sulfato disuelta, mientras que la mayor correlaciOn es entre el nivel de ph y el nivel de dureza, siendo este de sOlo 0.15.')
+
+st.image('pairplot.png')
+st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"Conclusiones intermedias"}</h1>', unsafe_allow_html=True)
+st.write('Es posible observar que el agua se comporta de manera similar en cada categorias por separado, teniendo en cuenta que en la muestra predomina el agua no potable.Además se evidencia que el agua potable muestra más concentraciOn en el promedio entre cada variable, mientras que el agua no potable llega a tener una mayor dispersiOn. Se puede concluir que el agua no es potable cuando las variables no están en equilibrio y sus valores se alejan de los promedios esperados.')
+
+st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"Boxplots con variable objetivo"}</h1>', unsafe_allow_html=True)
+
 
 #pot = data['Potability'].value_counts()
 #pot.index = ['NO', 'SI']
