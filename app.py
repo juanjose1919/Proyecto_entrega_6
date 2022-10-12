@@ -3,6 +3,29 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 
+st.sidebar.markdown(f'<h1 style="text-align: center; color:#F4D03F ;font-size:35px;">{"INTRODUCCION"}</h1>', unsafe_allow_html=True)
+st.sidebar.markdown(f'<h1 style="color:#000000 ;font-size:22px;">{"Primera parte: ExploraciOn inicial de los datos"}</h1>', unsafe_allow_html=True)
+st.sidebar.markdown(f'<h1 style="color:#000000 ;font-size:22px;">{"Segunda parte: Limpieza de los datos"}</h1>', unsafe_allow_html=True)
+st.sidebar.markdown(f'<h1 style="color:#000000 ;font-size:22px;">{"Tercera parte: TransformaciOn de datos"}</h1>', unsafe_allow_html=True)
+st.sidebar.markdown(f'<h1 style="color:#000000 ;font-size:22px;">{"Cuarta parte: CategorizaciOn de los datos"}</h1>', unsafe_allow_html=True)
+st.sidebar.markdown(f'<h1 style="color:#000000 ;font-size:22px;">{"Quinta parte: VisualizaciOn de los datos"}</h1>', unsafe_allow_html=True)
+
+
+st.sidebar.markdown(f'<h1 style="text-align: center ; color:#F4D03F ;font-size:35px;">{"AUTORES:"}</h1>', unsafe_allow_html=True)
+
+with st.sidebar:
+    Valeria_Mendez = st.sidebar.button('Valeria_Mendez')
+    if Valeria_Mendez:
+        st.sidebar.markdown(f'<h1 style="color:#000000 ;font-size:18px;">{"Hola mi nombre es Valeria Mendez y estoy en octavo semestre"}</h1>', unsafe_allow_html=True)
+    Gerardo_Pardo = st.sidebar.button('Gerardo_Pardo')
+    if Gerardo_Pardo:
+        st.sidebar.markdown(f'<h1 style="color:#000000 ;font-size:18px;">{"Hola mi nombre es Gerardo Pardo y estoy en septimo semestre"}</h1>', unsafe_allow_html=True)
+    Juan_BohOrquez = st.sidebar.button('Juan_BohOrquez')
+    if Juan_BohOrquez:
+        st.sidebar.markdown(f'<h1 style="color:#000000 ;font-size:18px;">{"Hola mi nombre es Juan BohOrquez y estoy en septimo semestre"}</h1>', unsafe_allow_html=True)
+
+
+st.sidebar.markdown(f'<h1 style="text-align: center; color:#F4D03F ;font-size:30px;">{"FACULDAD DE ECONOMiA"}</h1>', unsafe_allow_html=True)
 
 data = pd.read_csv('datasets3.csv')
 
