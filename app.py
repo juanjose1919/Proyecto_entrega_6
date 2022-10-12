@@ -102,6 +102,83 @@ st.write('Es posible observar que el agua se comporta de manera similar en cada 
 
 st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"Boxplots con variable objetivo"}</h1>', unsafe_allow_html=True)
 
+col3, col4 = st.columns(2)
+with col3:
+    st.image('./images/ph_boxplot.png', width=340)
+with col4:
+    st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:25px;">{"PH - POTABILITY"}</h1>', unsafe_allow_html=True)
+    st.write('Tanto para para el agua potable como para la no potable el ph se concentra en niveles entre 6 y 8, ambos presentan una distribucion simetrica de los datos y en el caso del aguna no potable existe una mayor disperciOn.')
+
+col5, col6 = st.columns(2)
+with col5:
+    st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:25px;">{"SOLIDS - POTABILITY"}</h1>', unsafe_allow_html=True)
+    st.write('Tanto para para el agua potable como para la no potable la cantidad de solidos disueltos se concentra cerca a 20000, en ambos casos se presenta una asimetria positiva lo que indica que la media puede ser mayor que la mediana y se presentan outliers en valores mayores a 40000, sobre el limite superior.')
+with col6:
+    st.image('./images/Solids_boxplot.png', width=340)
+
+
+col7, col8 = st.columns(2)
+with col7:
+    st.image('./images/Hardness_boxplot.png')    
+with col8:
+    st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:25px;">{"HARDNESS - POTABILITY"}</h1>', unsafe_allow_html=True)
+    st.write('Para los dos casos los niveles de dureza se concentran en los 200, la distribuciOn de la dureza en el agua no potable es simetrica, por el contrario en el agua potable se presenta una asimetria negativa, indicando una media menor a la mediana. Se presentan outliers en tanto el limite inferior como el superior.')
+
+
+col9, col10 = st.columns(2)
+with col9:
+    st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:25px;">{"CHLORAMINES - POTABILITY"}</h1>', unsafe_allow_html=True)
+    st.write('Igualmente para los dos casos los niveles se concentran entre 6 y 8, siendo la disperciOn del agua potable ligeramente mayor. En este caso aunque para el valor de la mediana se inclina mas hacia un nivel de cloraminas de 8 mostrando una asimetria negativa, además se presentan outliers que sobrepasan ambos limites.')
+with col10:
+    st.image('./images/Chloramines_boxplot.png')
+
+col11, col12 = st.columns(2)
+with col11:
+    st.image('./images/Sulfate_boxplot.png')
+with col12:
+    st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:25px;">{"SULFATE - POTABILITY"}</h1>', unsafe_allow_html=True)
+    st.write('En el caso de la cantidad de sulfato el agua potable muestra mayor dispersiOn, mostrando también una asimetria positiva, aunque tanto esta como el agua no potable tienen medianas similares.')
+
+col13, col14 = st.columns(2)
+with col13:
+    st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:25px;">{"CONDUCTIVITY - POTABILITY"}</h1>', unsafe_allow_html=True)
+    st.write('En la conductividad el agua no potable muestra una ligera asimetria positiva, ambas dispersiones se sitúan entre los 380 y 490 aproximadamente y sOlo en el caso del agua no potable se evidencian outliers en los dos limites.')
+with col14:
+    st.image('./images/conductivity_boxplot.png')
+
+col15, col16 = st.columns(2)
+with col15:
+    st.image('./images/Organic_carbon_boxplot.png')    
+with col16:
+    st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:22px;">{"ORGANIC CARBON - POTABILITY"}</h1>', unsafe_allow_html=True)
+    st.write('Para los dos casos los niveles se concentran entre 12 y 17, siendo la disperciOn del agua no potable ligeramente mayor. En este caso aunque para el valor de la mediana se inclina mas hacia un nivel mayor de carbOn mostrando una asimetria positiv, se presentan outliers que sobrepasan ambos limites siendo mayores en el agua no potable.')
+
+
+
+col17, col18 = st.columns(2)
+with col17:
+    st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:21px;">{"TRIHALOMETHANES - POTABILITY"}</h1>', unsafe_allow_html=True)
+    st.write('Para para los trihalometanos se evidencian ambas dispersiones entre los 55 y 80, en este caso el agua no potable tiene una asimetria negativa mientras el agua potable una ligera asimetria positiva, las dos muestran outliers en ambos limites.')
+with col18:
+    st.image('./images/Trihalomethanes_boxplot.png')
+
+col19, col20 = st.columns(2)
+with col19:
+    st.image('./images/Turbidity_boxplot.png')
+with col20:
+    st.markdown(f'<h1 style="text-align: center; color:#CB4335 ;font-size:25px;">{"TURBIDITY - POTABILITY"}</h1>', unsafe_allow_html=True)
+    st.write('En la turbidez el agua potable y no potable muestran medianas similares, junto a distribuciones simétricas entre 3.5 y 4.5, ambos casos presentan outliers tanto en el limite inferior como en el superior.')
+
+st.markdown(f'<h1 style="color:#117A65 ;font-size:35px;">{"Quinta parte: CategorizaciOn de los datos"}</h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 style="color:#CB4335 ;font-size:25px;">{"¿El dataset sin la variable objetivo sigue una distribuciOn normal multivariada?"}</h1>', unsafe_allow_html=True)
+st.image('./images/hist.png', width=600)
+
+
+
+
+
+
+
 
 #pot = data['Potability'].value_counts()
 #pot.index = ['NO', 'SI']
